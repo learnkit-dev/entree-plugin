@@ -1,0 +1,6 @@
+plugin:
+    name: 'learnkit.entree::lang.plugin.name'
+    description: 'learnkit.entree::lang.plugin.description'
+    author: LearnKit
+    icon: oc-icon-lock
+    homepage: ''
