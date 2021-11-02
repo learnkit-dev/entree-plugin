@@ -1,2 +1,5 @@
 1.0.1:
     - Initialize plugin.
+1.0.2:
+    - Added migration for the LMS & teams plugin
+    - add_entree_organisation_to_teams_table.php

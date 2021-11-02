@@ -1,5 +1,12 @@
 <?php
 
-Route::get('/entree/login', function () {
-    \LearnKit\Entree\Classes\Entree::instance()->login();
+Route::group([
+    'prefix' => '/entree',
+    'namespace' => 'LearnKit\Entree\Http\Controllers',
+], function () {
+    Route::get('login', 'Authenticate@login');
+
+    Route::post('acs', 'Authenticate@acs');
+
+    Route::get('sp/metadata', 'Metadata@sp');
 });

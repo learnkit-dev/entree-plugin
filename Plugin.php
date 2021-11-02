@@ -1,7 +1,9 @@
 <?php namespace LearnKit\Entree;
 
+use Event;
 use System\Classes\PluginBase;
 use LearnKit\Entree\Console\InstallEntree;
+use LearnKit\Entree\Classes\Extend\CodecyclerTeams;
 
 class Plugin extends PluginBase
 {
@@ -12,5 +14,10 @@ class Plugin extends PluginBase
 
         // Register console command
         $this->registerConsoleCommand('entree.install', InstallEntree::class);
+    }
+
+    public function boot()
+    {
+        Event::subscribe(CodecyclerTeams::class);
     }
 }

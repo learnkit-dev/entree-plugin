@@ -14,17 +14,17 @@ $settings = array(
     // the BaseURL of the view that process the SAML Message.
     // Ex. http://sp.example.com/
     //     http://example.com/sp/
-    'baseurl' => url('/'),
+    'baseurl' => 'https://entree.share.codecycler.dev/entree',
 
     // Service Provider Data that we are deploying
     'sp' => array(
         // Identifier of the SP entity  (must be a URI)
-        'entityId' => url('/entree'),
+        'entityId' => 'https://entree.share.codecycler.dev/entree',
         // Specifies info about where and how the <AuthnResponse> message MUST be
         // returned to the requester, in this case our SP.
         'assertionConsumerService' => array(
             // URL Location where the <Response> from the IdP will be returned
-            'url' => url('/entree/acs'),
+            'url' => 'https://entree.share.codecycler.dev/entree/acs',
             // SAML protocol binding to be used when returning the <Response>
             // message.  Onelogin Toolkit supports for this endpoint the
             // HTTP-POST binding only
