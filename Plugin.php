@@ -20,4 +20,31 @@ class Plugin extends PluginBase
     {
         Event::subscribe(CodecyclerTeams::class);
     }
+
+    public function registerSettings()
+    {
+        return [
+            'settings' => [
+                'label'       => 'Entree Settings',
+                'description' => 'Manage Kennisnet Entree based settings.',
+                'category'    => 'system::lang.system.categories.system',
+                'icon'        => 'icon-cog',
+                'class'       => 'LearnKit\Entree\Models\Settings',
+                'order'       => 500,
+                'keywords'    => 'entree kennisnet',
+                'permissions' => ['learnkit.entree.access_settings']
+            ]
+        ];
+    }
+
+    public function registerPermissions()
+    {
+        return [
+            'learnkit.entree.access_settings' => [
+                'label' => 'Access the Entree settings',
+                'tab' => 'Kennisnet Entree',
+                'order' => 200,
+            ],
+        ];
+    }
 }

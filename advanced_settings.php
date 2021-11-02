@@ -1,5 +1,7 @@
 <?php
 
+use LearnKit\Entree\Models\Settings;
+
 $advancedSettings = array(
 
     // Compression settings
@@ -132,34 +134,22 @@ $advancedSettings = array(
         'lowercaseUrlencoding' => false,
     ),
 
-    // Contact information template, it is recommended to suply a technical and support contacts
     'contactPerson' => array(
         'technical' => array(
-            'givenName' => 'Sebastiaan',
-            'emailAddress' => 'sebastiaan@codecycler.dev'
+            'givenName' => Settings::get('organisation_name', env('LEARNKIT_ENTREE_NAME', 'Sebastiaan')),
+            'emailAddress' => Settings::get('organisation_email', env('LEARNKIT_ENTREE_EMAIL', 'sebastiaan@codecycler.dev')),
         ),
         'support' => array(
-            'givenName' => 'Sebastiaan',
-            'emailAddress' => 'sebastiaan@codecycler.dev'
+            'givenName' => Settings::get('organisation_name', env('LEARNKIT_ENTREE_NAME', 'Sebastiaan')),
+            'emailAddress' => Settings::get('organisation_email', env('LEARNKIT_ENTREE_EMAIL', 'sebastiaan@codecycler.dev')),
         ),
     ),
 
-    // Organization information template, the info in en_US lang is recomended, add more if required
     'organization' => array(
         'nl-NL' => array(
-            'name' => 'LearnKit',
-            'displayname' => 'LearnKit',
-            'url' => 'https://learnkit.app'
+            'name' => Settings::get('organisation_organisation_name', env('LEARNKIT_ENTREE_ORGANISATION', 'LearnKit')),
+            'displayname' => Settings::get('organisation_organisation_name', env('LEARNKIT_ENTREE_ORGANISATION', 'LearnKit')),
+            'url' => Settings::get('organisation_organisation_url', env('LEARNKIT_ENTREE_ORGANISATION_URL', 'https://learnkit.app'))
         ),
     ),
 );
-
-
-/* Interoperable SAML 2.0 Web Browser SSO Profile [saml2int]   http://saml2int.org/profile/current
-
-   'authnRequestsSigned' => false,    // SP SHOULD NOT sign the <samlp:AuthnRequest>,
-                                      // MUST NOT assume that the IdP validates the sign
-   'wantAssertionsSigned' => true,
-   'wantAssertionsEncrypted' => true, // MUST be enabled if SSL/HTTPs is disabled
-   'wantNameIdEncrypted' => false,
-*/
