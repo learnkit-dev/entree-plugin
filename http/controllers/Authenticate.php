@@ -1,6 +1,7 @@
 <?php namespace LearnKit\Entree\Http\Controllers;
 
 use Auth;
+use Ramsey\Uuid\Uuid;
 use Illuminate\Http\Request;
 use RainLab\User\Models\User;
 use System\Classes\PluginManager;
@@ -48,12 +49,12 @@ class Authenticate extends Controller
                     $team->users()->add($user);
                 }
             }
-
-            Auth::loginUsingId($user->id);
-
-            $request->session()->save();
-
-            return redirect('/');
         }
+
+        Auth::loginUsingId($user->id);
+
+        $request->session()->save();
+
+        return redirect('/');
     }
 }

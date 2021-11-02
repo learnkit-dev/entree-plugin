@@ -3,6 +3,7 @@
 Route::group([
     'prefix' => '/entree',
     'namespace' => 'LearnKit\Entree\Http\Controllers',
+    'middleware' => 'web',
 ], function () {
     Route::get('login', 'Authenticate@login');
 
