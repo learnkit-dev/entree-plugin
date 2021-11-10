@@ -27,7 +27,7 @@ class Plugin extends PluginBase
             'settings' => [
                 'label'       => 'Entree Settings',
                 'description' => 'Manage Kennisnet Entree based settings.',
-                'category'    => 'system::lang.system.categories.system',
+                'category'    => 'LMS',
                 'icon'        => 'icon-cog',
                 'class'       => 'LearnKit\Entree\Models\Settings',
                 'order'       => 500,
