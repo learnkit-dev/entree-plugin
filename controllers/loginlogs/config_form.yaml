@@ -1,0 +1,10 @@
+name: LoginLogs
+form: $/learnkit/entree/models/loginlog/fields.yaml
+modelClass: LearnKit\Entree\Models\LoginLog
+defaultRedirect: learnkit/entree/loginlogs
+create:
+    redirect: 'learnkit/entree/loginlogs/update/:id'
+    redirectClose: learnkit/entree/loginlogs
+update:
+    redirect: learnkit/entree/loginlogs
+    redirectClose: learnkit/entree/loginlogs

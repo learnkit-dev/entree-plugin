@@ -1,6 +1,7 @@
 <?php namespace LearnKit\Entree;
 
 use Event;
+use Backend;
 use System\Classes\PluginBase;
 use LearnKit\Entree\Console\InstallEntree;
 use LearnKit\Entree\Classes\Extend\CodecyclerTeams;
@@ -31,6 +32,16 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-cog',
                 'class'       => 'LearnKit\Entree\Models\Settings',
                 'order'       => 500,
+                'keywords'    => 'entree kennisnet',
+                'permissions' => ['learnkit.entree.access_settings']
+            ],
+            'entree-logs' => [
+                'label'       => 'Entree Settings',
+                'description' => 'Manage Kennisnet Entree based settings.',
+                'category'    => 'system::lang.system.categories.logs',
+                'icon'        => 'octo-icon-text-format-ul',
+                'url'         => Backend::url('learnkit/entree/loginlogs'),
+                'order'       => 2000,
                 'keywords'    => 'entree kennisnet',
                 'permissions' => ['learnkit.entree.access_settings']
             ]

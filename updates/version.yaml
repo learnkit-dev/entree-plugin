@@ -1,5 +1,11 @@
 1.0.1:
-    - Initialize plugin.
+    - 'Initialize plugin.'
 1.0.2:
-    - Added migration for the LMS & teams plugin
+    - 'Added migration for the LMS & teams plugin'
     - add_entree_organisation_to_teams_table.php
+1.0.3:
+    - 'Created table learnkit_entree_login_logs'
+    - builder_table_create_learnkit_entree_login_logs.php
+1.0.4:
+    - 'Updated table learnkit_entree_login_logs'
+    - builder_table_update_learnkit_entree_login_logs.php

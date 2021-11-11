@@ -1,0 +1,6 @@
+columns:
+    created_at:
+        label: 'learnkit.entree::lang.fields.created_at'
+        type: datetime
+        searchable: false
+        sortable: true

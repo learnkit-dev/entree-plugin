@@ -1,0 +1,9 @@
+fields:
+    created_at:
+        label: 'learnkit.entree::lang.fields.created_at'
+        span: auto
+        type: text
+    login_attributes:
+        label: 'learnkit.entree::lang.fields.attributes'
+        span: full
+        type: partial

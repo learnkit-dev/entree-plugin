@@ -1,6 +1,7 @@
 <?php namespace LearnKit\Entree\Http\Controllers;
 
 use Auth;
+use LearnKit\Entree\Models\LoginLog;
 use Ramsey\Uuid\Uuid;
 use Illuminate\Http\Request;
 use RainLab\User\Models\User;
@@ -21,6 +22,11 @@ class Authenticate extends Controller
         $attributes = Entree::instance()
             ->processResponse()
             ->getAttributes();
+
+        // Create a new log
+        new LoginLog([
+            'login_attributes' => $attributes,
+        ]);
 
         //
         $user = User::findByEmail($attributes['mail'][0]);
