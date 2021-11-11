@@ -24,9 +24,11 @@ class Authenticate extends Controller
             ->getAttributes();
 
         // Create a new log
-        new LoginLog([
+        $log = new LoginLog([
             'login_attributes' => $attributes,
         ]);
+
+        $log->save();
 
         //
         $user = User::findByEmail($attributes['mail'][0]);
