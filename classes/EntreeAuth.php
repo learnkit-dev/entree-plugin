@@ -23,15 +23,19 @@ class EntreeAuth
     protected $messages = [
         'givenName.array' => 'Wij hebben geen voornaam doorgekregen',
         'givenName.min' => 'Wij hebben geen voornaam doorgekregen',
+        'givenName.required' => 'Wij hebben geen voornaam doorgekregen',
         'givenName.*.string' => 'Wij hebben geen voornaam doorgekregen',
         'sn.array' => 'Wij hebben geen achternaam doorgekregen',
         'sn.min' => 'Wij hebben geen achternaam doorgekregen',
+        'sn.required' => 'Wij hebben geen achternaam doorgekregen',
         'sn.*.string' => 'Wij hebben geen achternaam doorgekregen',
         'mail.array' => 'Wij hebben geen e-mailadres doorgekregen',
         'mail.min' => 'Wij hebben geen e-mailadres doorgekregen',
+        'mail.required' => 'Wij hebben geen e-mailadres doorgekregen',
         'mail.*.string' => 'Wij hebben geen e-mailadres doorgekregen',
         'nlEduPersonHomeOrganisationId.array' => 'Wij hebben geen organisatie doorgekregen',
         'nlEduPersonHomeOrganisationId.min' => 'Wij hebben geen organisatie doorgekregen',
+        'nlEduPersonHomeOrganisationId.required' => 'Wij hebben geen organisatie doorgekregen',
         'nlEduPersonHomeOrganisationId.*.min' => 'Wij hebben geen organisatie doorgekregen',
     ];
 
