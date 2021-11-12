@@ -31,3 +31,7 @@ fields:
     label: IdP x509 cert
     span: full
     type: textarea
+  arp_service_api_key:
+    label: ARP service API key
+    span: left
+    type: sensitive

@@ -1,6 +1,7 @@
 <?php namespace LearnKit\Entree\Classes\Extend;
 
 use Event;
+use LearnKit\EntreeArpService\EntreeArpService;
 
 class CodecyclerTeams
 {
@@ -15,13 +16,20 @@ class CodecyclerTeams
                 return;
             }
 
+            //
+            $service = new EntreeArpService();
+            $options = $service
+                ->schoolList()
+                ->pluck('friendlyNameWithBrin', 'brin');
+
+            //
             $formController->addTabFields([
                 'entree_organisation' => [
-                    'label' => 'nlEduPersonHomeOrganizationId',
-                    'type' => 'text',
+                    'label' => 'Organisation',
+                    'type' => 'dropdown',
+                    'options' => $options,
                     'span' => 'left',
                     'tab' => 'Kennisnet Entree',
-                    'comment' => 'Organization (e.g. REF1)',
                 ],
             ]);
         });

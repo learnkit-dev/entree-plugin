@@ -1,6 +1,7 @@
 <?php namespace LearnKit\Entree;
 
 use Event;
+use Config;
 use Backend;
 use System\Classes\PluginBase;
 use LearnKit\Entree\Console\InstallEntree;
@@ -20,6 +21,9 @@ class Plugin extends PluginBase
     public function boot()
     {
         Event::subscribe(CodecyclerTeams::class);
+
+        //
+        Config::set('entree-arp-service', Config::get('learnkit.entree::entree-arp-service'));
     }
 
     public function registerSettings()
