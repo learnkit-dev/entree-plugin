@@ -1,37 +1,54 @@
-fields:
-  url:
-    label: URL
-    span: left
-    type: text
-  idp_sso_url:
-    label: IDP SSO URL
-    span: left
-    type: text
-  idp_entity_id:
-    label: IDP entity ID
-    span: right
-    type: text
-  organisation_name:
-    label: Name
-    span: left
-    type: text
-  organisation_email:
-    label: Email
-    span: right
-    type: text
-  organisation_organisation_name:
-    label: Organisation name
-    span: left
-    type: text
-  organisation_organisation_url:
-    label: Organisation URL
-    span: right
-    type: text
-  idp_cert:
-    label: IdP x509 cert
-    span: full
-    type: textarea
-  arp_service_api_key:
-    label: ARP service API key
-    span: left
-    type: sensitive
+tabs:
+  fields:
+    arp_service_api_key:
+      label: ARP service API key
+      span: left
+      type: sensitive
+      tab: learnkit.entree::lang.tabs.general
+      comment: https://developers.wiki.kennisnet.nl/index.php?title=KNF:ARP_service
+    error_page:
+      label: Error page redirection
+      span: left
+      type: dropdown
+      tab: learnkit.entree::lang.tabs.general
+      comment: Redirect to this page if there is an exception
+    url:
+      label: URL
+      span: left
+      type: text
+      tab: learnkit.entree::lang.tabs.sp_settings
+    idp_sso_url:
+      label: IDP SSO URL
+      span: left
+      type: text
+      tab: learnkit.entree::lang.tabs.sp_settings
+    idp_entity_id:
+      label: IDP entity ID
+      span: right
+      type: text
+      tab: learnkit.entree::lang.tabs.sp_settings
+    organisation_name:
+      label: Name
+      span: left
+      type: text
+      tab: learnkit.entree::lang.tabs.sp_settings
+    organisation_email:
+      label: Email
+      span: right
+      type: text
+      tab: learnkit.entree::lang.tabs.sp_settings
+    organisation_organisation_name:
+      label: Organisation name
+      span: left
+      type: text
+      tab: learnkit.entree::lang.tabs.sp_settings
+    organisation_organisation_url:
+      label: Organisation URL
+      span: right
+      type: text
+      tab: learnkit.entree::lang.tabs.sp_settings
+    idp_cert:
+      label: IdP x509 cert
+      span: full
+      type: textarea
+      tab: learnkit.entree::lang.tabs.sp_settings

@@ -7,4 +7,8 @@
         'created_at' => 'Created at',
         'attributes' => 'Attributes',
     ],
+    'tabs' => [
+        'general' => 'General',
+        'sp_settings' => 'SP & IdP setup',
+    ],
 ];

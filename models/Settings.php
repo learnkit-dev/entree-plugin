@@ -1,5 +1,6 @@
 <?php namespace LearnKit\Entree\Models;
 
+use Cms\Classes\Page;
 use Model;
 
 class Settings extends Model
@@ -11,4 +12,9 @@ class Settings extends Model
 
     // Reference to field configuration
     public $settingsFields = 'fields.yaml';
+
+    public function getErrorPageOptions()
+    {
+        return Page::getNameList();
+    }
 }

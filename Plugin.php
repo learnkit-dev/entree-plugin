@@ -40,7 +40,7 @@ class Plugin extends PluginBase
                 'permissions' => ['learnkit.entree.access_settings']
             ],
             'entree-logs' => [
-                'label'       => 'Entree Settings',
+                'label'       => 'Entree Logs',
                 'description' => 'Manage Kennisnet Entree based settings.',
                 'category'    => 'system::lang.system.categories.logs',
                 'icon'        => 'octo-icon-text-format-ul',

@@ -30,6 +30,7 @@ class CodecyclerTeams
                     'options' => $options,
                     'span' => 'left',
                     'tab' => 'Kennisnet Entree',
+                    'placeholder' => 'Not attached',
                 ],
             ]);
         });
