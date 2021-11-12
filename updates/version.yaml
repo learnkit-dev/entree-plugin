@@ -9,3 +9,5 @@
 1.0.4:
     - 'Updated table learnkit_entree_login_logs'
     - builder_table_update_learnkit_entree_login_logs.php
+1.0.5:
+    - 'Using the Entree ARP service'
