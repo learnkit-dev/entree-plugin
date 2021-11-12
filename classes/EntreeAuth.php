@@ -10,13 +10,13 @@ use System\Classes\PluginManager;
 class EntreeAuth
 {
     protected $rules = [
-        'givenName' => ['array', 'min:1'],
+        'givenName' => ['required', 'array', 'min:1'],
         'givenName.*' => 'string',
-        'sn' => ['array', 'min:1'],
+        'sn' => ['required', 'array', 'min:1'],
         'sn.*' => 'string',
-        'mail' => ['array', 'min:1'],
+        'mail' => ['required', 'array', 'min:1'],
         'mail.*' => 'string',
-        'nlEduPersonHomeOrganizationId' => ['array', 'min:1'],
+        'nlEduPersonHomeOrganizationId' => ['required', 'array', 'min:1'],
         'nlEduPersonHomeOrganizationId.*' => 'string',
     ];
 
