@@ -49,6 +49,16 @@ tabs:
       tab: learnkit.entree::lang.tabs.sp_settings
     idp_cert:
       label: IdP x509 cert
-      span: full
-      type: textarea
+      span: left
+      type: codeeditor
+      tab: learnkit.entree::lang.tabs.sp_settings
+    sp_cert:
+      label: SP x509 cert
+      span: left
+      type: codeeditor
+      tab: learnkit.entree::lang.tabs.sp_settings
+    sp_key:
+      label: SP x509 key
+      span: right
+      type: codeeditor
       tab: learnkit.entree::lang.tabs.sp_settings

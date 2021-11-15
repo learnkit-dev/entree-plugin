@@ -39,8 +39,8 @@ $settings = array(
 
         // Usually x509cert and privateKey of the SP are provided by files placed at
         // the certs folder. But we can also provide them with the following parameters
-        'x509cert' => '',
-        'privateKey' => '',
+        'x509cert' => Settings::get('sp_cert'),
+        'privateKey' => Settings::get('sp_key'),
     ),
 
     // Identity Provider Data that we want connect with our SP
