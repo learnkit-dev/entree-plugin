@@ -24,7 +24,9 @@ class Entree
         try {
             $this->auth->processResponse();
         } catch (Error $e) {
+            report($e);
         } catch (ValidationError $e) {
+            report($e);
         }
 
         return $this;

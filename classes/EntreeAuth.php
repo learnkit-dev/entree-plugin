@@ -47,15 +47,15 @@ class EntreeAuth
     {
         $this->attributes = $attributes;
 
+        // Log the login attempt for debugging purposes
+        $this->log();
+
         $validator = \Validator::make($attributes, $this->rules, $this->messages);
 
         if ($validator->fails()) {
             // Run exception
             return $this->handleValidationError($validator);
         }
-
-        // Log the login attempt for debugging purposes
-        $this->log();
 
         // Find user by email
         $this->findUser();
