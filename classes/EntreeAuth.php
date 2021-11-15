@@ -127,7 +127,7 @@ class EntreeAuth
         return $this->attributes['givenName'][0];
     }
 
-    protected function getLastname()
+    protected function getSurname()
     {
         return $this->attributes['sn'][0];
     }
